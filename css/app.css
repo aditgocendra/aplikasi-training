@@ -1,0 +1,25 @@
+/* 
+    Document   : app
+    Created on : May 25, 2013, 12:14:39 PM
+    Author     : izwan
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.form-horizontal .control-label { 
+    text-align: left;
+}
+
+.ukuran-font { 
+    font-size: 12px;
+}
+
+.besar-font { 
+    font-size: 20px;
+}
+
+.navbar-inverse .navbar-inner { 
+    background-color: black;
+    background-image: none;
+}
+
