@@ -56,7 +56,7 @@
                     <td><?php echo $data['nama_paket']; ?></td>
                     <td><?php echo $data['harga']; ?></td>
                     <td><a href="index.php?link=rubah&&edit=masterPaket&&id=<?php echo $data['kode_paket']; ?>"><i class="icon-edit"></i></a></td>
-                    <td><a href="administrator/delete.php?link=del_paket&&id=<?php echo $data['kode_paket']; ?>"><i class="icon-remove"></i></a></td>
+                    <td><a href="administrator/delete.php?link=del_paket&&id=<?php echo $data['kode_paket']; ?>" onClick="return confirm('Anda yakin ingin menghapus data ini?')"><i class="icon-remove"></i></a></td>
                 </tr>
             <?php } ?>
         </table>

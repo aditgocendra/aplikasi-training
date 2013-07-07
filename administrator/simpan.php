@@ -105,21 +105,21 @@ if ($_GET[link] == "simpanJadwal") {
         ";
 }
 }
-if ($_GET[link] == "approved") {
+if ($_GET[link] == "approval") {
 
     $data = mysql_query("UPDATE  `daftar_training` SET  `status` =  'SUDAH_LUNAS' WHERE  `daftar_training`.`id` =  '$_POST[id]'");
     if ($data) {
         echo"
             <script type=\"text/javascript\">
                 alert(\"Data berhasil di konfirmasi.\")
-                location='../index.php?link=approved';
+                location='../index.php?link=approval';
             </script>
         ";
     } else {
         echo"
             <script type=\"text/javascript\">
                 alert(\"Data gagal disimpan..!!\")
-                location='../index.php?link=approved';
+                location='../index.php?link=approval';
             </script>
         ";
     }

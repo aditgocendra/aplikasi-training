@@ -61,7 +61,7 @@ if ($_GET[link] == "del_user") {
         echo"
             <script type=\"text/javascript\">
                 alert(\"Data berhasil dihapus.\")
-                location='../index.php?link=approved';
+                location='../index.php?link=about_us';
             </script>
         ";
     } else {

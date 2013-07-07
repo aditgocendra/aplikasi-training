@@ -13,26 +13,28 @@
                     <?php
                     session_start();
                     include 'koneksi.php';
-                    $query = mysql_query("select * from m_paket where nama_paket = '".$_GET[data]."'");
+                    $query = mysql_query("select * from m_paket where nama_paket = '" . $_GET[data] . "'");
                     $iki = mysql_fetch_array($query);
                     $query = mysql_query("select * from m_paket order by kode_paket desc");
                     ?>
                     <label class="control-label" for="nama_paket">Nama Paket : &nbsp;</label>
                     <input type="hidden" name="nama_peserta" value="<?php echo $_SESSION[username]; ?>">
-                    <select name="nama_paket" onchange="window.location='?link=daftar_training&data=' + this.value">
-                        
-                        <?php
-                        while ($data = mysql_fetch_array($query)) {
-                            $jt = $_GET['data'];
-                            $selected = "";
-                            $value = $data['nama_paket'];
-                            if($jt==$value){
-                                $selected = "selected";
+                    <?php if ($_GET[data] == "") { ?>
+                        <select name="nama_paket" onclick="window.location = '?link=daftar_training&data=' + this.value">
+                        <?php } else { ?>
+                            <select name="nama_paket" onchange="window.location = '?link=daftar_training&data=' + this.value">
+                                <?php
+                            } while ($data = mysql_fetch_array($query)) {
+                                $jt = $_GET['data'];
+                                $selected = "";
+                                $value = $data['nama_paket'];
+                                if ($jt == $value) {
+                                    $selected = "selected";
+                                }
+                                echo "<option $selected value=\"$value\">$value</option>";
                             }
-                            echo "<option $selected value=\"$value\">$value</option>";
-                            } 
-                       ?>
-                    </select>
+                            ?>
+                        </select>
                 </div>
                 <div class="control-group">
                     <label class="control-label" for="harga">Harga : &nbsp;</label>
@@ -41,7 +43,7 @@
                 </div>
                 <div align="center">
                     <button type="submit" class="btn btn-success" ng-click="simpan()" ng-disabled="isClean() || formEdit.$invalid"><i class="icon-ok"></i>&nbsp;Simpan</button>
-                    <button type="button" class="btn btn-danger" onclick="window.location='index.php'"><i class="icon-remove"></i>&nbsp;Batal</button>
+                    <button type="button" class="btn btn-danger" onclick="window.location = 'index.php'"><i class="icon-remove"></i>&nbsp;Batal</button>
                 </div>  
             </form>
         </div>

@@ -1,14 +1,21 @@
 <?php
 include 'koneksi.php';
 $query = mysql_query("SELECT * FROM  `m_paket` ORDER BY  `m_paket`.`kode_paket` DESC ");
-
+echo "$data2[nama_paket]";
 while($data = mysql_fetch_array($query)){
+$query_jadwal = mysql_query("SELECT * FROM  `m_jadwal` where nama_paket='$data[nama_paket]'");
+$data3 = mysql_fetch_array($query_jadwal);
 ?>
 <br>
 <table border="1" class="table btn-info">
     <tr>
         <td colspan="2">
             Paket <?php echo $data[nama_paket]; ?>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            Jadwal Training : <br><?php echo $data3[tanggal]; ?>
         </td>
     </tr>
     <tr>
@@ -26,8 +33,17 @@ while($data = mysql_fetch_array($query)){
 } 
 ?>
 <div class="alert alert-info">
+    <p><strong>Informasi Space Peserta Training :</strong></p>
+  <p>1. Training Java Desktop</p>
+  <p>- Jumlah peserta : 7 orang</p>
+  <p>- Sisa space&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 3 orang</p><br>
+  <p>2. Training PHP</p>
+  <p>- Jumlah peserta : 6 orang</p>
+  <p>- Sisa space&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 4 orang</p>
+</div>
+<div class="alert alert-info">
     <p><strong>Informasi Pembayaran Training :</strong></p>
   <p>Pembayaran training bisa langsung konfirmasi melalui telepon dengan no.telp : (021) 8798 4412, atau melalui E-mail : hrd@mediainfo.co.id.</p>
-  <p>Setelah melakukan konfirmasi kepada kami, Tunggu informasi kembali dari kami selama 1x24 jam, atau bisa lihat langsung info pembayaran yang belum dan sudah lunas di halaman website kami.</p>
+  <p>Setelah melakukan konfirmasi kepada kami, Tunggu informasi kembali dari kami selama 1x24 jam, atau bisa lihat langsung info pembayaran yang belum lunas dan sudah lunas di halaman website kami.</p>
   <p>Terima Kasih Atas Pengertian dan Perhatian Anda.</p> 
 </div>

@@ -6,6 +6,7 @@
     <tr class="table btn-inverse">
         <td>Nama Peserta</td>						
         <td>Nama Paket</td>
+        <td>Harga</td>
         <td>Status</td>
     </tr>
     <?php
@@ -16,6 +17,7 @@
         <tr class="table btn-info">
             <td><?php echo $data['nama_peserta']; ?></td>
             <td><?php echo $data['nama_paket']; ?></td>
+            <td><?php echo number_format($data['harga']); ?></td>
             <td><?php echo $data['status']; ?></td>
         </tr>
     <?php } ?>

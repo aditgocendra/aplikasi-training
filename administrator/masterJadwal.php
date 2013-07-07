@@ -53,7 +53,7 @@
                     <td><?php echo $data['nama_paket']; ?></td>
                     <td><?php echo $data['tanggal']; ?></td>
                     <td><a href="index.php?link=rubah&&edit=masterJadwal&&id=<?php echo $data['id']; ?>"><i class="icon-edit"></i></a></td>
-                    <td><a href="administrator/delete.php?link=del_jadwal&&id=<?php echo $data['id']; ?>"><i class="icon-remove"></i></a></td>
+                    <td><a href="administrator/delete.php?link=del_jadwal&&id=<?php echo $data['id']; ?>" onClick="return confirm('Anda yakin ingin menghapus data ini?')"><i class="icon-remove"></i></a></td>
                 </tr>
                 <?php } ?>
             </table>

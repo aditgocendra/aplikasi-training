@@ -64,7 +64,7 @@
                     <td><?php echo $data['no_hp']; ?></td>
                     <td><?php echo $data['akses']; ?></td>
                     <td><a href="index.php?link=rubah&&edit=masterUser&&id=<?php echo $data['username']; ?>"><i class="icon-edit"></i></a></td>
-                    <td><a href="administrator/delete.php?link=del_user&&username=<?php echo $data['username']; ?>"><i class="icon-remove"></i></a></td>
+                    <td><a href="administrator/delete.php?link=del_user&&username=<?php echo $data['username']; ?>" onClick="return confirm('Anda yakin ingin menghapus data ini?')"><i class="icon-remove"></i></a></td>
                 </tr>
                 <?php } ?>
             </table>
