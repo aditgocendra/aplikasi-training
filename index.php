@@ -18,7 +18,7 @@
                         .b_atas{
                             -webkit-box-shadow: 3px 3px 3px 3px black;
                             -webkit-border-radius: 2px;
-                            margin: 0 auto;
+                            margin: 40px auto;
                             width: 900px;
                             text-align: left;
                             vertical-align: middle;
@@ -190,7 +190,7 @@
                     </head>
                     <body>
                         <div class="b_atas">
-                            <div class="navbar navbar-inverse baju ">
+                            <div class="navbar navbar-inverse baju navbar-fixed-top">
                                 <div class="navbar-inner">
                                     <div class="container">
                                         <a href="index.php"><img src="images/perusahaan.png" class="brand" /></a>
@@ -311,6 +311,17 @@
                                 </tr>
                             </table>
                         </div>
+                            <footer>
+                                <div class="footer btn-info" style="text-align: center; text background-size: 100%; padding-top: 0px;">
+                                   <div class="container narrow row-fluid">
+                                       <div>
+                                          <p>
+                                            Copyright 2013 By <a href="http://mohamad-sholihin.blogspot.com">Mohamad Sholihin</a> | All rights reserved: <a href="http://mohamad-sholihin.blogspot.com">suramadu.com</a>
+                                        </p>
+                                      </div>
+                                   </div>
+                                </div>
+                            </footer>
                     </body>
 
                     <script>
