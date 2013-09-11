@@ -9,7 +9,7 @@
                     <style type="text/css">
                         body{
                             background-image: url("images/back.png");
-                            background-attachment: fixed; 
+                            background-attachment: fixed;
                         }
                         .table_muser{
                             width: 500px;
@@ -266,6 +266,9 @@
                                                         case "informasi_training":
                                                             include "informasi_training.php";
                                                             break;
+                                                        case "tutorial":
+                                                            include "tutorial.php";
+                                                            break;
                                                         case "daftar_peserta":
                                                             include "administrator/daftar_peserta.php";
                                                             break;
@@ -311,7 +314,7 @@
                                 </tr>
                             </table>
                         </div>
-                            <footer>
+                            <footer class="navbar-fixed-bottom">
                                 <div class="footer btn-info" style="text-align: center; text background-size: 100%; padding-top: 0px;">
                                    <div class="container narrow row-fluid">
                                        <div>

@@ -9,6 +9,7 @@
         <a href="?link=register">Register</a>
     </li>
     <li><a href="?link=about_us">About Us</a></li>
+    <li><a href="?link=tutorial">Petunjuk</a></li>
 </ul>
 
 <ul class="nav pull-right ukuran-font">
