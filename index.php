@@ -316,7 +316,7 @@
                                    <div class="container narrow row-fluid">
                                        <div>
                                           <p>
-                                            Copyright 2013 By <a href="http://mohamad-sholihin.blogspot.com">Mohamad Sholihin</a> | All rights reserved: <a href="http://mohamad-sholihin.blogspot.com">suramadu.com</a>
+                                            Copyright 2013 By <a href="http://dadangiswanto.blogspot.com">Dadang Iswanto</a> | All rights reserved: <a href=www.mediainfo.co.id>mediainfo.co.id</a>
                                         </p>
                                       </div>
                                    </div>

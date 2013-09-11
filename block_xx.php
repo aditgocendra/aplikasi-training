@@ -1,7 +1,7 @@
 <?php
 function cek_pesan($teks) {
 
-    $kata_kotor = array("kontol", "memek", "jembut");
+    $kata_kotor = array("kontol", "memek", "jembut", "tai", "asu", "jancok", "Itil");
 
     $hasil = 0;
 

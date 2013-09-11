@@ -16,9 +16,37 @@ if ($_GET[link] == "saveRegister") {
             alert(\"kata kotor telah kami blokir dan tidak dapat dijadikan username.\")
             location='index.php?link=register';
             </script>";
-            }
- 
-            else{
+            } else if(cek_pesan($password)){
+            echo"
+            <script type=\"text/javascript\">
+            alert(\"kata kotor telah kami blokir dan tidak dapat dijadikan password.\")
+            location='index.php?link=register';
+            </script>";
+            } else if(cek_pesan($confirm)){
+            echo"
+            <script type=\"text/javascript\">
+            alert(\"kata kotor telah kami blokir dan tidak dapat dijadikan Konfirmasi Password.\")
+            location='index.php?link=register';
+            </script>";
+            } else if(cek_pesan($email)){
+            echo"
+            <script type=\"text/javascript\">
+            alert(\"kata kotor telah kami blokir dan tidak dapat dijadikan email.\")
+            location='index.php?link=register';
+            </script>";
+            } else if(cek_pesan($no_hp)){
+            echo"
+            <script type=\"text/javascript\">
+            alert(\"kata kotor telah kami blokir dan tidak dapat dijadikan no.hp.\")
+            location='index.php?link=register';
+            </script>";
+            } else if(cek_pesan($nama_lengkap)){
+            echo"
+            <script type=\"text/javascript\">
+            alert(\"kata kotor telah kami blokir dan tidak dapat dijadikan nama lengkap.\")
+            location='index.php?link=register';
+            </script>";
+        }else{
                 if ($_POST[password] == $_POST[confirm]) {
                     $query = mysql_query("INSERT INTO `tugas_akhir_12101020`.`register` (`nama_lengkap`, `username`, `password`, `email`, `no_hp`, `akses`) VALUES ('$_POST[nama_lengkap]', '$_POST[username]', '$_POST[password]', '$_POST[email]', '$_POST[no_hp]', '$_POST[akses]')");
                     if ($query) {
@@ -65,32 +93,55 @@ if ($_GET[link] == "saveRegister") {
     $pass = "$data[password]";
     echo $rows;
     if ($rows > 0) {
-        if ($newpass == $confirm) {
-            $pass = "$data[password]";
-            $query = mysql_query("UPDATE  `register` SET  `password` =  '$newpass' WHERE  `register`.`username` =  '$_SESSION[username]'");
-            if ($query) {
-                echo"
-            <script type=\"text/javascript\">
-                alert(\"Data berhasil dirubah.\")
-                location='index.php?link=rubah_password';
-            </script>
-        ";
-            } else {
-                echo"
-            <script type=\"text/javascript\">
-                alert(\"Data gagal dirubah..!!\")
-                location='index.php?link=rubah_password';
-            </script>
-        ";
-            }
-        } else {
+        if (cek_pesan($oldpass)) {
             echo"
             <script type=\"text/javascript\">
-                alert(\"Sandi anda tidak falid..!!\")
-                location='index.php?link=rubah_password';
-            </script>
-        ";
+            alert(\"kata kotor telah kami blokir dan tidak dapat dijadikan old password.\")
+            location='index.php?link=register';
+            </script>";
+        } else if(cek_pesan($newpass)){
+            echo"
+            <script type=\"text/javascript\">
+            alert(\"kata kotor telah kami blokir dan tidak dapat dijadikan new password.\")
+            location='index.php?link=register';
+            </script>";
+        } else if(cek_pesan($confirm)){
+            echo"
+            <script type=\"text/javascript\">
+            alert(\"kata kotor telah kami blokir dan tidak dapat dijadikan konfirmasi password.\")
+            location='index.php?link=register';
+            </script>";
+        }else{
+            if ($newpass == $confirm) {
+                $pass = "$data[password]";
+                $query = mysql_query("UPDATE  `register` SET  `password` =  '$newpass' WHERE  `register`.`username` =  '$_SESSION[username]'");
+                if ($query) {
+                    echo"
+                <script type=\"text/javascript\">
+                    alert(\"Data berhasil dirubah.\")
+                    location='index.php?link=rubah_password';
+                </script>
+            ";
+                } else {
+                    echo"
+                <script type=\"text/javascript\">
+                    alert(\"Data gagal dirubah..!!\")
+                    location='index.php?link=rubah_password';
+                </script>
+            ";
+                }
+            } else {
+                echo"
+                <script type=\"text/javascript\">
+                    alert(\"Sandi anda tidak falid..!!\")
+                    location='index.php?link=rubah_password';
+                </script>
+            ";
+            }
         }
+        
+        
+        
     } else {
         echo"
             <script type=\"text/javascript\">
