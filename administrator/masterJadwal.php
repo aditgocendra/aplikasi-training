@@ -10,7 +10,7 @@
             <h3 align="center">Master Jadwal Training</h3>
             <form class="form_jadwal btn-primary form-horizontal form-actions" action="administrator/simpan.php?link=simpanJadwal" method="post">
                 <div class="control-group">
-                    <div class="input-append date datepicker" data-date-format="dd-mm-yyyy">
+                    <div class="input-append date datepicker" data-date-format="yyyy-mm-dd">
                     <label for="dpd1">Start Date : &nbsp;</label>
                     <input size="5" type="text" id="dpd1" name="startdate"><span class="add-on"><i class="icon-th"></i></span>
                     <label for="dpd2">End Date : &nbsp;</label>

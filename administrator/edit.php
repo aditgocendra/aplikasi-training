@@ -39,7 +39,7 @@ if ($_GET[rubah] == "masterUser") {
 
 } if ($_GET[rubah] == "masterJadwal") {
     $tanggal = "$_POST[startdate] - $_POST[enddate]";
-    $query = mysql_query("UPDATE  `tugas_akhir_12101020`.`m_jadwal` SET  `tanggal` =  '$tanggal', `nama_paket` =  '$_POST[nama_paket]' WHERE  `m_jadwal`.`id` ='$_POST[id]'");
+    $query = mysql_query("UPDATE  `tugas_akhir_12101020`.`m_jadwal` SET  `tanggal_training` =  '$tanggal', `nama_paket` =  '$_POST[nama_paket]' WHERE  `m_jadwal`.`id_jadwal` ='$_POST[id]'");
     if ($query) {
         echo"
             <script type=\"text/javascript\">

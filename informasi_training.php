@@ -41,9 +41,3 @@ $data3 = mysql_fetch_array($query_jadwal);
   <p>- Jumlah peserta : 6 orang</p>
   <p>- Sisa space&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 4 orang</p>
 </div>
-<div class="alert alert-info">
-    <p><strong>Informasi Pembayaran Training :</strong></p>
-  <p>Pembayaran training bisa langsung konfirmasi melalui telepon dengan no.telp : (021) 8798 4412, atau melalui E-mail : hrd@mediainfo.co.id.</p>
-  <p>Setelah melakukan konfirmasi kepada kami, Tunggu informasi kembali dari kami selama 1x24 jam, atau bisa lihat langsung info pembayaran yang belum lunas dan sudah lunas di halaman website kami.</p>
-  <p>Terima Kasih Atas Pengertian dan Perhatian Anda.</p> 
-</div>

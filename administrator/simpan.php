@@ -77,10 +77,8 @@ if ($_GET[link] == "simpanUser") {
 
 if ($_GET[link] == "simpanJadwal") {
     if ($_POST[startdate] != null && $_POST[enddate] != null && $_POST[nama_paket] != null) {
-        $tanggal = "$_POST[startdate] - $_POST[enddate]";
-        echo"$tanggal";
         $nama_paket = "$_POST[nama_paket]";
-        $data = mysql_query("INSERT INTO `tugas_akhir_12101020`.`m_jadwal` (`id` ,`tanggal` ,`nama_paket`) VALUES (NULL ,'$tanggal', '$nama_paket')");
+        $data = mysql_query("INSERT INTO `tugas_akhir_12101020`.`m_jadwal` (`id_jadwal` ,`start_date` ,`end_date` ,`nama_paket`) VALUES (NULL ,'$_POST[startdate]', '$_POST[enddate]', '$nama_paket')");
         if ($data) {
             echo"
             <script type=\"text/javascript\">
@@ -107,7 +105,7 @@ if ($_GET[link] == "simpanJadwal") {
 }
 if ($_GET[link] == "approval") {
 
-    $data = mysql_query("UPDATE  `daftar_training` SET  `status` =  'SUDAH_LUNAS' WHERE  `daftar_training`.`id` =  '$_POST[id]'");
+    $data = mysql_query("UPDATE  `daftar_training` SET  `status` =  'SUDAH_LUNAS' WHERE  `daftar_training`.`id_daftar_training` =  '$_POST[id]'");
     if ($data) {
         echo"
             <script type=\"text/javascript\">
