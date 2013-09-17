@@ -46,14 +46,14 @@
                 </tr>
                 <?php 
                     include 'koneksi.php';
-                    $query = mysql_query("SELECT * FROM `m_jadwal` order by id asc");
+                    $query = mysql_query("SELECT * FROM  `m_jadwal`");
                     while($data = mysql_fetch_array($query)) {
                 ?>
                 <tr class="btn-info">
                     <td><?php echo $data['nama_paket']; ?></td>
-                    <td><?php echo $data['tanggal']; ?></td>
-                    <td><a href="index.php?link=rubah&&edit=masterJadwal&&id=<?php echo $data['id']; ?>"><i class="icon-edit"></i></a></td>
-                    <td><a href="administrator/delete.php?link=del_jadwal&&id=<?php echo $data['id']; ?>" onClick="return confirm('Anda yakin ingin menghapus data ini?')"><i class="icon-remove"></i></a></td>
+                    <td><?php echo $data['start_date']; ?> s/d <?php echo $data['end_date']; ?></td>
+                    <td><a href="index.php?link=rubah&&edit=masterJadwal&&id=<?php echo $data['id_jadwal']; ?>"><i class="icon-edit"></i></a></td>
+                    <td><a href="administrator/delete.php?link=del_jadwal&&id=<?php echo $data['id_jadwal']; ?>" onClick="return confirm('Anda yakin ingin menghapus data ini?')"><i class="icon-remove"></i></a></td>
                 </tr>
                 <?php } ?>
             </table>

@@ -45,7 +45,7 @@ if ($_GET[edit] == "masterUser") {
     <?php
 } if ($_GET[edit] == "masterJadwal") {
 
-    $query = mysql_query("SELECT * FROM  `m_jadwal` where id = '$_GET[id]'");
+    $query = mysql_query("SELECT * FROM  `m_jadwal` where id_jadwal = '$_GET[id]'");
     $data = mysql_fetch_array($query);
     ?>
     <div class="span7 well-large" style="text-align: center">
@@ -54,14 +54,14 @@ if ($_GET[edit] == "masterUser") {
             <div class="control-group">
                 <div>
                     <label for="tanggalAwal" style="text-align: left">Periode : <?php echo $data[tanggal]; ?></label>
-                    <input type="hidden" name="id" value="<?php echo $data[id]; ?>">
+                    <input type="hidden" name="id" value="<?php echo $data[id_jadwal]; ?>">
                 </div>
                 <br>
                 <div class="input-append date datepicker" data-date-format="dd-mm-yyyy">
                     <label for="dpd1">StartDate : &nbsp;</label>
-                    <input size="5" type="text" id="dpd1" name="startdate"><span class="add-on"><i class="icon-th"></i></span>
+                    <input size="5" type="text" id="dpd1" name="startdate" value="<?php echo $data[start_date]; ?>"><span class="add-on"><i class="icon-th"></i></span>
                     <label for="dpd2">EndDate : &nbsp;</label>
-                    <input size="5" type="text" id="dpd2" name="enddate"><span class="add-on"><i class="icon-th"></i></span>
+                    <input size="5" type="text" id="dpd2" name="enddate" value="<?php echo $data[end_date]; ?>"><span class="add-on"><i class="icon-th"></i></span>
                 </div>
                 <label for="nama_paket">Nama Paket : &nbsp;</label>
                 <!--<select id="nama_paket" name="nama_paket" onchange="location.href='?link=master_jadwal&&selected=' + this.options[this.selectedIndex].value;">-->
