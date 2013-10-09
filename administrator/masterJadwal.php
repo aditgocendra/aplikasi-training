@@ -46,7 +46,7 @@
                 </tr>
                 <?php 
                     include 'koneksi.php';
-                    $query = mysql_query("SELECT * FROM  `m_jadwal`");
+                    $query = mysql_query("SELECT * FROM `m_jadwal` order by id_jadwal asc");
                     while($data = mysql_fetch_array($query)) {
                 ?>
                 <tr class="btn-info">
