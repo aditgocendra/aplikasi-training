@@ -21,7 +21,7 @@ if ($_GET[link] == "del_user") {
     }
     
 } if ($_GET[link] == "del_jadwal") {
-    $query = mysql_query("delete from m_jadwal where id = '$_GET[id]'");
+    $query = mysql_query("delete from m_jadwal where id_jadwal = '$_GET[id]'");
     if ($query) {
         echo"
             <script type=\"text/javascript\">

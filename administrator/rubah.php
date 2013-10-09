@@ -45,7 +45,7 @@ if ($_GET[edit] == "masterUser") {
     <?php
 } if ($_GET[edit] == "masterJadwal") {
 
-    $query = mysql_query("SELECT * FROM  `m_jadwal` where id = '$_GET[id]'");
+    $query = mysql_query("SELECT * FROM  `m_jadwal` where id_jadwal = '$_GET[id]'");
     $data = mysql_fetch_array($query);
     ?>
     <div class="span7 well-large" style="text-align: center">

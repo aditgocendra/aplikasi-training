@@ -15,7 +15,7 @@ $data3 = mysql_fetch_array($query_jadwal);
     </tr>
     <tr>
         <td colspan="2">
-            Jadwal Training : <br><?php echo $data3[tanggal]; ?>
+            Jadwal Training : <br><?php echo $data3[start_date]; ?> s/d <?php echo $data3[end_date]; ?>
         </td>
     </tr>
     <tr>
