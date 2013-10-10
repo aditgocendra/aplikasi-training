@@ -56,19 +56,19 @@ if ($_GET[link] == "del_user") {
         ";
     }
 } if ($_GET[link] == "del_approve") {
-    $query = mysql_query("delete from daftar_training where id = '$_GET[id]'");
+    $query = mysql_query("delete from daftar_training where id_daftar_training = '$_GET[id]'");
     if ($query) {
         echo"
             <script type=\"text/javascript\">
                 alert(\"Data berhasil dihapus.\")
-                location='../index.php?link=about_us';
+                location='../index.php?link=approval';
             </script>
         ";
     } else {
         echo"
             <script type=\"text/javascript\">
                 alert(\"Data gagal dihapus..!!\")
-                location='../index.php?link=master_paket';
+                location='../index.php?link=approval';
             </script>
         ";
     }

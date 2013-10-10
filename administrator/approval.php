@@ -21,7 +21,7 @@
             <?php if ($data['status'] != "SUDAH_LUNAS"){ ?>
             <td><input type="hidden" name="id" value="<?php echo $data['id_daftar_training']; ?>"><input type="submit"  value="Approve"></td>
             <?php }else{ ?><td><?php echo "Approved"."</td>";} ?>
-            <td><a href="administrator/delete.php?link=del_approve&&id=<?php echo $data['id']; ?>" onClick="return confirm('Anda yakin ingin menghapus data ini?')"><i class="icon-remove"></i></a></td>
+            <td><a href="administrator/delete.php?link=del_approve&&id=<?php echo $data['id_daftar_training']; ?>" onClick="return confirm('Anda yakin ingin menghapus data ini?')"><i class="icon-remove"></i></a></td>
         </tr>
     </form>
     <?php } ?>

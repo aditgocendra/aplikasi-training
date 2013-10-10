@@ -1,6 +1,6 @@
 <?php
 include 'koneksi.php';
-$result = mysql_query("SELECT * FROM  `daftar_training` order by id asc");
+$result = mysql_query("SELECT * FROM  `daftar_training` order by id_daftar_training asc");
 ?>
 <table>
     <?php

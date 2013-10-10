@@ -54,7 +54,7 @@ if ($_GET[edit] == "masterUser") {
             <div class="control-group">
                 <div>
                     <label for="tanggalAwal" style="text-align: left">Periode : <?php echo $data[tanggal]; ?></label>
-                    <input type="hidden" name="id" value="<?php echo $data[id]; ?>">
+                    <input type="hidden" name="id" value="<?php echo $data[id_jadwal]; ?>">
                 </div>
                 <br>
                 <div class="input-append date datepicker" data-date-format="dd-mm-yyyy">
