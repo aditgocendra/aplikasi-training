@@ -59,9 +59,9 @@ if ($_GET[edit] == "masterUser") {
                 <br>
                 <div class="input-append date datepicker" data-date-format="dd-mm-yyyy">
                     <label for="dpd1">StartDate : &nbsp;</label>
-                    <input size="5" type="text" id="dpd1" name="startdate"><span class="add-on"><i class="icon-th"></i></span>
+                    <input size="5" type="text" id="dpd1" name="startdate" value="<?php echo $data[start_date]; ?>"><span class="add-on"><i class="icon-th"></i></span>
                     <label for="dpd2">EndDate : &nbsp;</label>
-                    <input size="5" type="text" id="dpd2" name="enddate"><span class="add-on"><i class="icon-th"></i></span>
+                    <input size="5" type="text" id="dpd2" name="enddate" value="<?php echo $data[end_date]; ?>"><span class="add-on"><i class="icon-th"></i></span>
                 </div>
                 <label for="nama_paket">Nama Paket : &nbsp;</label>
                 <!--<select id="nama_paket" name="nama_paket" onchange="location.href='?link=master_jadwal&&selected=' + this.options[this.selectedIndex].value;">-->

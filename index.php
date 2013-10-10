@@ -122,12 +122,14 @@
                             margin-top: -5px;
                             -webkit-box-shadow: 0px 3px 3px 3px black;
                             -webkit-border-radius: 6px;
+                            box-shadow: 0px 3px 3px 3px black;
+                            border-radius: 6px;
                             width: 868px;
-                            height: 1000px;
                             background-color: #fff;
+                            overflow: hidden;
                         }
                         .samping{
-                            margin-top: 20px;
+                            margin-top: 50px;
                             -webkit-box-shadow: 1px 1px 1px 1px black;
                             -webkit-border-radius: 2px;
                             width: 200px;
@@ -142,7 +144,7 @@
                             margin-top: 20px;
                             margin-left: 5px;
                             width: 610px;
-                            height: 975px;
+                            height: 100;
                             background-color: #ffffff;
                             padding: 3px 5px 15px 15px;
                             -webkit-border-radius: 5px;
@@ -167,8 +169,6 @@
                             background-color: #ffffff;
                             padding: 10px 15px 10px;
                         }
-                        .left{
-                        }
                         .navbar-inverse .baju {
                             background-color: red;
                         }
@@ -189,7 +189,7 @@
                     </script>
                     </head>
                     <body>
-                        <div class="b_atas">
+                        <div>
                             <div class="navbar navbar-inverse baju navbar-fixed-top">
                                 <div class="navbar-inner">
                                     <div class="container">
@@ -294,10 +294,10 @@
                                                             include "rubah_password.php";
                                                             break;
                                                         case "error2":
-                                                            echo "<script> alert('Tidak dapat mengakses halaman sebelum login..!!'); </script>";
+                                                            echo "<script> alert('Tidak dapat mengakses halaman sebelum login..!!'); window.location = 'index.php'; </script>";
                                                             break;
                                                         case "error":
-                                                            echo "<script> alert('Silahkan masukkan username dan password anda dengan benar..!!'); </script>";
+                                                            echo "<script> alert('Silahkan masukkan username dan password anda dengan benar..!!'); window.location = 'index.php'; </script>";
                                                             break;
                                                         case "sukses_register":
                                                             echo "<script> alert('Anda berhasil mendaftarkan diri, silahkan melakukan login'); </script>";
